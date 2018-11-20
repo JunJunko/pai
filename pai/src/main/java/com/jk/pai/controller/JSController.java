@@ -30,5 +30,23 @@ public class JSController {
 			e.printStackTrace();
 		}  
 	}
+	
+	
+	@RequestMapping(value = "/test.js", method = RequestMethod.GET)
+	public void test(Writer writer,String channel) {
+		 StringBuffer sbHtml = new StringBuffer();
+		 try {
+			 sbHtml.append(FileUtils.readFileToString(new ClassPathResource("/static/js/test.js").getFile()));
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        try {
+			writer.write(sbHtml.toString());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
+	}
 
 }

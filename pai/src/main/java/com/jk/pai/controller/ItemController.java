@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/pai")
 public class ItemController {
 
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	@RequestMapping(value = "/itemlist", method = RequestMethod.GET)
 	public void listItem(Writer writer,String channel) {
 		 StringBuffer sbHtml = new StringBuffer();
 		 try {
-			 sbHtml.append(FileUtils.readFileToString(new ClassPathResource("index.html").getFile()));
+			 sbHtml.append(FileUtils.readFileToString(new ClassPathResource("item.html").getFile()));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
