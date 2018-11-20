@@ -5,11 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.jk.pai.controller")
+@ComponentScan("com.jk.pai")
 public class SpringbootStartApplication {
  
     public static void main(String[] args) {
         SpringApplication.run(SpringbootStartApplication.class, args);
     } 
 }
-
