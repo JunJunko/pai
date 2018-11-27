@@ -72,5 +72,26 @@
 		</dependency>
 
 
+		<!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.8.11.2</version>
+		</dependency>
+
+
+
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

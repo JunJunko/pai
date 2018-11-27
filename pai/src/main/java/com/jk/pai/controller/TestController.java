@@ -1,5 +1,6 @@
 package com.jk.pai.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.Writer;
 
@@ -19,7 +20,7 @@ public class TestController {
 	public void getUserByGet( Writer writer) {
 		StringBuffer sbHtml = new StringBuffer();
 		 try {
-			 sbHtml.append(FileUtils.readFileToString(new ClassPathResource("test.html").getFile()));
+			 sbHtml.append(FileUtils.readFileToString(new File("web/test2.html")));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

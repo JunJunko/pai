@@ -9,16 +9,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+
 @SpringBootApplication
 @RequestMapping(value = "/pai")
-public class IndexController {
-
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
+public class RootTxtController {
+	
+	@RequestMapping(value = "root.txt", method = RequestMethod.GET)
 	public void listItem(Writer writer,String channel) {
 		 StringBuffer sbHtml = new StringBuffer();
 		 try {
 //			 sbHtml.append(IOUtils.readLines(new ClassPathResource("index.html").getInputStream()));
-			 sbHtml.append(FileUtils.readFileToString(new File("web/index.html")));
+			 sbHtml.append(FileUtils.readFileToString(new File("root.txt")));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

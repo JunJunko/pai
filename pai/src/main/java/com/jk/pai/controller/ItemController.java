@@ -1,5 +1,6 @@
 package com.jk.pai.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.Writer;
 
@@ -17,7 +18,9 @@ public class ItemController {
 	public void listItem(Writer writer,String channel) {
 		 StringBuffer sbHtml = new StringBuffer();
 		 try {
-			 sbHtml.append(FileUtils.readFileToString(new ClassPathResource("item.html").getFile()));
+//			 sbHtml.append(FileUtils.readFileToString(new ClassPathResource("item.html").getFile()));
+			 sbHtml.append(FileUtils.readFileToString(new File("web/item.html")));
+
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
