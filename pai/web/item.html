@@ -622,11 +622,11 @@
 		$.get(url,function(data,status){
 			for(var i=0,l=data.length;i<l;i++){
 				html.push('          <div id=\"J_item_577360879690\"                                                                                                                                                        '); 
-				html.push('					class=\"J_super_item item-mod item-mod-b item-mod-common \"                                                                                                                  ');
+				html.push('					class=\"J_super_item item-mod item-mod-b item-mod-common \ "                                                                                                                  ');
 				html.push('					data-time=\"1542333600,1542815999\" data-inner=\"0\"                                                                                                                           ');
 				html.push('					data-id=\"577360879690\" data-limit=\"1\" data-huodongtype=\"0\"                                                                                                                 ');
 				html.push('					data-hongbao=\"0\" data-shopid=\"712\" data-manjian=\"1\">                                                                                                                       ');
-				html.push('					<div class=\"img-box\">                                                                                                                                                      ');
+				html.push('					<div class=\"img-box\" >                                                                                                                                                      ');
 				html.push('						<img class=\"img lazy\" alt=\"【潮流前线】休闲时字母短款宽松T恤卫衣\"                                                                                                        ');
 				html.push('							data-expo=\"http://localhost:8080/image/getImage?imageNmae=image1.jpg\"                                                                                                  ');
 				html.push('							data-original=\"http://localhost:8080/image/image1\"                                                                                                                     ');
@@ -634,7 +634,7 @@
 				html.push(data[i].imageUrl);
 				html.push('\">');
 				html.push('					</div>                                                                                                                                                                     ');
-				html.push('					<div class=\"J_item_notice msg-soon\">                                                                                                                                       ');
+				html.push('					<div class=\"J_item_notice msg-soon\" ">                                                                                                                                       ');
 				html.push('						<p>限售100件</p>                                                                                                                                                         ');
 				html.push('						<span><strong>10:00开抢</strong><br />（以拍下时间为准）</span>                                                                                                          ');
 				html.push('					</div>                                                                                                                                                                     ');
@@ -649,9 +649,13 @@
 				html.push(data[i].price);
 				html.push('</span><a                                                                                        ');
 				html.push('								class=\"item-btn J_item_link J_item_btn\"                                                                                                                              ');
-				html.push('								href=\"https://s.click.taobao.com/Bm47aJw\"         ');
+				html.push('								href=\"');
+				html.push(data[i].url);
+				html.push('"');
 				html.push('								target=\"_blank\"                                                                                                                                                      ');
-				html.push('								data-href=\"https://s.click.taobao.com/Bm47aJw\"    ');
+				html.push('								data-href=\"');
+				html.push(data[i].url);
+				html.push('"');
 				html.push('								style=\"display: block;\"></a>                                                                                                                                         ');
 				html.push('						</p>                                                                                                                                                                     ');
 				html.push('					</div>                                                                                                                                                                     ');
