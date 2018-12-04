@@ -130,7 +130,7 @@
 		<div class="container-hd">
 			<div class="container J_ubt_module" data-spm="super_logo">
 				<div class="super-header-logo">
-					<a class="logo-fanli ht" href="ec2-54-202-166-133.us-west-2.compute.amazonaws.com:8080/image/index">返利网</a>
+					<a class="logo-fanli ht" href="localhost:8080/image/index">返利网</a>
 				</div>
 				<ul class="super-header-ensure clearfix">
 					<li><i class="i-ensure1"></i>每日10点上新</li>
@@ -613,48 +613,55 @@
 	</script>
 	
 		<script type="text/javascript">
-				var html = [];
+			
+		</script>
+		
+		<script>
+		var url ="getlist";
+		var html = [];
+		$.get(url,function(data,status){
+			for(var i=0,l=data.length;i<l;i++){
 				html.push('          <div id=\"J_item_577360879690\"                                                                                                                                                        '); 
 				html.push('					class=\"J_super_item item-mod item-mod-b item-mod-common \"                                                                                                                  ');
 				html.push('					data-time=\"1542333600,1542815999\" data-inner=\"0\"                                                                                                                           ');
 				html.push('					data-id=\"577360879690\" data-limit=\"1\" data-huodongtype=\"0\"                                                                                                                 ');
 				html.push('					data-hongbao=\"0\" data-shopid=\"712\" data-manjian=\"1\">                                                                                                                       ');
-				html.push('					<a data-ubtindex=\"1\"                                                                                                                                                       ');
-				html.push('						data-spm=\"super_brand.pc.pid-577360879690~bid-16037\"                                                                                                                     ');
-				html.push('						href=\"javascript:void(0)\" class=\"fav J_addmyfav\"                                                                                                                         ');
-				html.push('						data-itemid=\"577360879690\" data-brandid=\"16037\" data-shopid=\"712\"><i></i><span>收藏</span></a><a                                                                         ');
-				html.push('						data-ubtindex=\"1\"                                                                                                                                                        ');
-				html.push('						data-spm=\"super_brand.pc.pid-577360879690~bid-16037\"                                                                                                                     ');
-				html.push('						class=\"J_item_link link \" href=\"javascript:void(0);\"                                                                                                                     ');
-				html.push('						target=\"_blank\"                                                                                                                                                          ');
-				html.push('						data-href=\"https://fun.fanli.com/goshop/go?id=712&pid=577360879690&lc=shouye_brand&go=http%3A%2F%2Fdetail.tmall.com%2Fitem.htm%3Fid%3D577360879690&sign=8a28fd37\"></a>   ');
 				html.push('					<div class=\"img-box\">                                                                                                                                                      ');
 				html.push('						<img class=\"img lazy\" alt=\"【潮流前线】休闲时字母短款宽松T恤卫衣\"                                                                                                        ');
-				html.push('							data-expo=\"http://ec2-54-202-166-133.us-west-2.compute.amazonaws.com:8080/image/getImage?imageNmae=image1.jpg\"                                                                                                  ');
-				html.push('							data-original=\"http://ec2-54-202-166-133.us-west-2.compute.amazonaws.com:8080/image/image1\"                                                                                                                     ');
-				html.push('							src=\"http://ec2-54-202-166-133.us-west-2.compute.amazonaws.com:8080/image/getImage?imageName=image1.jpg\">                                                                                                       ');
+				html.push('							data-expo=\"http://localhost:8080/image/getImage?imageNmae=image1.jpg\"                                                                                                  ');
+				html.push('							data-original=\"http://localhost:8080/image/image1\"                                                                                                                     ');
+				html.push('							src=\"');
+				html.push(data[i].imageUrl);
+				html.push('\">');
 				html.push('					</div>                                                                                                                                                                     ');
 				html.push('					<div class=\"J_item_notice msg-soon\">                                                                                                                                       ');
 				html.push('						<p>限售100件</p>                                                                                                                                                         ');
 				html.push('						<span><strong>10:00开抢</strong><br />（以拍下时间为准）</span>                                                                                                          ');
 				html.push('					</div>                                                                                                                                                                     ');
-				html.push('					<h4 class=\"title\">【潮流前线】休闲时字母短款宽松T恤卫衣</h4>                                                                                                               ');
+				html.push('					<h4 class=\"title\">');
+				html.push(data[i].itemName);
+				html.push('					</h4> ');  
 				html.push('					<div class=\"money desc\">                                                                                                                                                   ');
 				html.push('						<p class=\"price\">                                                                                                                                                        ');
-				html.push('							&yen;59<span class=\"ticket\">20元券 </span>                                                                                                                             ');
 				html.push('						</p>                                                                                                                                                                     ');
 				html.push('						<p class=\"price-now clearfix\">                                                                                                                                           ');
-				html.push('							<span class=\"price-info\"> 到手价&yen;</span><span class=\"price-num\">39</span><a                                                                                        ');
+				html.push('							<span class=\"price-info\"> 到手价&yen;</span><span class=\"price-num\">');
+				html.push(data[i].price);
+				html.push('</span><a                                                                                        ');
 				html.push('								class=\"item-btn J_item_link J_item_btn\"                                                                                                                              ');
-				html.push('								href=\"https://fun.fanli.com/goshop/go?id=712&pid=577360879690&lc=shouye_brand&go=http%3A%2F%2Fdetail.tmall.com%2Fitem.htm%3Fid%3D577360879690&sign=8a28fd37\"         ');
+				html.push('								href=\"https://s.click.taobao.com/Bm47aJw\"         ');
 				html.push('								target=\"_blank\"                                                                                                                                                      ');
-				html.push('								data-href=\"https://fun.fanli.com/goshop/go?id=712&pid=577360879690&lc=shouye_brand&go=http%3A%2F%2Fdetail.tmall.com%2Fitem.htm%3Fid%3D577360879690&sign=8a28fd37\"    ');
+				html.push('								data-href=\"https://s.click.taobao.com/Bm47aJw\"    ');
 				html.push('								style=\"display: block;\"></a>                                                                                                                                         ');
 				html.push('						</p>                                                                                                                                                                     ');
 				html.push('					</div>                                                                                                                                                                     ');
 				html.push('				</div>                                                                                                                                                                       ');
-				html = html.join('\n');
-				document.getElementById('J_brand_main_itme').innerHTML = html;
+			}
+			html = html.join('\n');
+			document.getElementById('J_brand_main_itme').innerHTML = html; 
+		    });
+		
+		
 		</script>
 </body>
 </html>
